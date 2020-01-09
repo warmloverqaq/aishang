@@ -145,7 +145,7 @@ import wepy from 'wepy'
 
 export default class Index extends wepy.page {
   config = {
-    navigationBarTitleText: '首页'
+    navigationBarTitleText: '艾尚定制'
   }
   components = {
 
@@ -167,18 +167,18 @@ export default class Index extends wepy.page {
     {name:"grids_img2",img:"/pages/image/202001091105287.jpg",url:"../../pages/grids_img2/grids_img2"},
     {name:"grids_img3",img:"/pages/image/2020010911052810.jpg",url:"../../pages/grids_img3/grids_img3"},
     {name:"grids_img4",img:"/pages/image/2020010911052815.jpg",url:"../../pages/grids_img4/grids_img4"},
-    {name:"grids_img5",img:"/pages/image/202001091105282.jpg",url:"../../pages/grids_img1/grids_img1"},
-    {name:"grids_img6",img:"/pages/image/202001091105287.jpg",url:"../../pages/grids_img2/grids_img2"},
-    {name:"grids_img7",img:"/pages/image/2020010911052810.jpg",url:"../../pages/grids_img3/grids_img3"},
-    {name:"grids_img8",img:"/pages/image/2020010911052815.jpg",url:"../../pages/grids_img4/grids_img4"},
-    {name:"grids_img9",img:"/pages/image/202001091105282.jpg",url:"../../pages/grids_img1/grids_img1"},
-    {name:"grids_img10",img:"/pages/image/202001091105287.jpg",url:"../../pages/grids_img2/grids_img2"},
-    {name:"grids_img11",img:"/pages/image/2020010911052810.jpg",url:"../../pages/grids_img3/grids_img3"},
-    {name:"grids_img12",img:"/pages/image/2020010911052815.jpg",url:"../../pages/grids_img4/grids_img4"},
-    {name:"grids_img13",img:"/pages/image/202001091105282.jpg",url:"../../pages/grids_img1/grids_img1"},
-    {name:"grids_img14",img:"/pages/image/202001091105287.jpg",url:"../../pages/grids_img2/grids_img2"},
-    {name:"grids_img15",img:"/pages/image/2020010911052810.jpg",url:"../../pages/grids_img3/grids_img3"},
-    {name:"grids_img16",img:"/pages/image/2020010911052815.jpg",url:"../../pages/grids_img4/grids_img4"},
+    {name:"grids_img5",img:"/pages/image/2020010911052820.jpg",url:"../../pages/grids_img5/grids_img5"},
+    {name:"grids_img6",img:"/pages/image/2020010911052824.jpg",url:"../../pages/grids_img6/grids_img6"},
+    {name:"grids_img7",img:"/pages/image/2020010911052827.jpg",url:"../../pages/grids_img7/grids_img7"},
+    {name:"grids_img8",img:"/pages/image/2020010911052828.jpg",url:"../../pages/grids_img8/grids_img8"},
+    {name:"grids_img9",img:"/pages/image/2020010911052834.jpg",url:"../../pages/grids_img9/grids_img9"},
+    {name:"grids_img10",img:"/pages/image/2020010911052839.jpg",url:"../../pages/grids_img10/grids_img10"},
+    {name:"grids_img11",img:"/pages/image/2020010911052844.jpg",url:"../../pages/grids_img11/grids_img11"},
+    {name:"grids_img12",img:"/pages/image/2020010911052849.jpg",url:"../../pages/grids_img12/grids_img12"},
+    {name:"grids_img13",img:"/pages/image/2020010911052854.jpg",url:"../../pages/grids_img13/grids_img13"},
+    {name:"grids_img14",img:"/pages/image/2020010911052858.jpg",url:"../../pages/grids_img14/grids_img14"},
+    {name:"grids_img15",img:"/pages/image/2020010911052864.jpg",url:"../../pages/grids_img15/grids_img15"},
+    {name:"grids_img16",img:"/pages/image/2020010911052868.jpg",url:"../../pages/grids_img16/grids_img16"},
     ]
   }
 

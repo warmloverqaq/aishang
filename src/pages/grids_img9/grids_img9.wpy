@@ -1,0 +1,74 @@
+<style>
+.content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding-left: 50rpx;
+  padding-right: 50rpx;
+  text-align: center;
+}
+
+.detail {
+  display: flex;
+  flex-direction: column;
+  margin-top: 15rpx;
+  margin-bottom: 0rpx;
+}
+.detail .title {
+  font-size: 40rpx;
+  margin: 10rpx;
+  color: black;
+  text-align: justify;
+}
+.detail .price {
+  color: red;
+  font-size: 40rpx;
+  margin: 10rpx;
+}
+.detail .address {
+  font-size: 40rpx;
+  margin: 10rpx;
+  color: black;
+  text-align: justify;
+}
+</style>
+<template>
+  <view class="content">
+  <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" style="height:875rpx;width:750rpx;">
+    <block wx:for="{{imgUrls}}" wx:key="key">
+      <swiper-item>
+        <image src='{{item}}' style="height:875rpx;width:750rpx;"></image>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+<view class='detail'>
+    <text class="title">帅气显瘦皮衣外套</text>
+    <text class="price">￥499</text>
+    <text class="address">店铺地址：湖北省武汉市洪山区南湖大道保利心语二期s116伊寇洗衣店</text>
+    <text class="price">获取详细商品信息请上店咨询或加微信咨询</text>
+  </view>
+</template>
+<script>
+import wepy from 'wepy'
+
+export default class User extends wepy.page {
+  config = {
+    navigationBarTitleText: '商品详情'
+  }
+
+  data = {
+    imgUrls: [
+      '/pages/image/2020010911052833.jpg',
+      '/pages/image/2020010911052835.jpg',
+      '/pages/image/2020010911052836.jpg',
+      '/pages/image/2020010911052837.jpg',
+    ],
+    indicatorDots: true,
+    autoplay: true,
+    interval: 3000,
+    duration: 1000,
+  }
+}
+
+</script>
