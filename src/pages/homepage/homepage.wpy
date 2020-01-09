@@ -157,7 +157,7 @@ export default class Index extends wepy.page {
       '/pages/image/shouye2.jpg',
       '/pages/image/shouye3.jpg'
     ],
-    indicatorDots: false,
+    indicatorDots: true,
     autoplay: true,
     interval: 3000,
     duration: 1000,
