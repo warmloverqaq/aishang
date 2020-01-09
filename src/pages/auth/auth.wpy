@@ -1,0 +1,277 @@
+<style>
+@font-face {
+  font-family: 'iconfont';  /* project id 1575962 */
+  src: url('//at.alicdn.com/t/font_1575962_r8um2xqk9y8.eot');
+  src: url('//at.alicdn.com/t/font_1575962_r8um2xqk9y8.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_1575962_r8um2xqk9y8.woff2') format('woff2'),
+  url('//at.alicdn.com/t/font_1575962_r8um2xqk9y8.woff') format('woff'),
+  url('//at.alicdn.com/t/font_1575962_r8um2xqk9y8.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_1575962_r8um2xqk9y8.svg#iconfont') format('svg');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-guanyu:before {
+  content: "\e600";
+}
+
+.icon-wodeqianbao:before {
+  content: "\e663";
+}
+
+.icon-order:before {
+  content: "\e601";
+}
+
+.icon-wenti:before {
+  content: "\e608";
+}
+
+.icon-tuijianhaoyou:before {
+  content: "\e748";
+}
+
+.icon-shezhi:before {
+  content: "\e66f";
+}
+
+.icon-yijian:before {
+  content: "\e63a";
+}
+
+.icon-shangcheng:before {
+  content: "\e602";
+}
+
+
+
+  .userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+    width: 80rpx;
+    height: 80rpx;
+    border-radius: 50%;
+  }
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  margin-top: 200px;
+}
+
+.background {
+  width: 100%;
+  height: 20%;
+  position: fixed;
+  background-size: 100% 100%;
+  z-index: -1;
+}
+
+.contentgerenxinxi
+{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.divLine{
+    background: #E0E3DA;
+    width: 100%;
+    height: 5rpx;
+  }
+
+.contentCaidan {
+  height: 100%;
+  display: flex;
+  padding-left: 10rpx;
+  padding-right: 10rpx;
+  padding-top: 10rpx;
+  padding-bottom: 10rpx;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+  box-sizing: border-box;
+  margin: 0 ;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding-left: 10rpx;
+  padding-right: 10rpx;
+  text-align: left;
+}
+
+.service-three{
+  width: auto;
+  margin-top: 50rpx;
+    margin-left: 30rpx;
+  margin-right: 30rpx;
+  height: 60rpx;
+    border:1rpx solid #CCCCCC;
+}
+.btn{
+  margin-top: 40rpx;
+}
+
+</style>
+<template>
+  <view class="container">
+    <view class="contentgerenxinxi">
+  <view class="userinfo" @tap="handleViewTap">
+    <image class='background' src="/pages/image/gerentupian.jpg" mode="aspectFill"></image>
+    <text>\n</text>
+      <image class="userinfo-avatar" src="{{ userInfo.avatarUrl }}" background-size="cover" style="width:120rpx;height:120rpx"/>
+      <view class="userinfo-nickname">{{ userInfo.nickName }}</view>
+    </view>
+  </view>
+  </view>
+
+<view class="contentCaidan">
+<text>\n</text>
+</view>
+  <view class="divLine"></view>
+<view class="contentCaidan">
+<navigator url="../../pages/wodedingdan/wodedingdan">
+    <view style="flex:1;height:50px">
+      <view class="iconfont">
+        <text class='iconfont icon-order' style='color:#1296db;font-size:50rpx;'></text>
+        <text> </text>
+        <text style="font-size:35rpx">我的订单</text>
+      </view>
+    </view>
+  </navigator>
+
+  <view class="divLine"></view>
+  <navigator url="../../pages/wodeqianbao/wodeqianbao">
+    <view style="flex:2;height:50px">
+      <view class="iconfont">
+        <text class='iconfont icon-wodeqianbao' style='color:#1296db;font-size:50rpx;'></text>
+        <text>  </text>
+        <text style="font-size:35rpx">我的钱包</text>
+      </view>
+    </view>
+  </navigator>
+   <view class="divLine"></view>
+<navigator url="../../pages/kaiyunshangcheng/kaiyunshangcheng">
+  <view style="flex:3;height:50px">
+      <view class="iconfont">
+        <text class='iconfont icon-shangcheng' style='color:#1296db;font-size:50rpx;'></text>
+        <text> </text>
+        <text style="font-size:35rpx">鞋帽商城</text>
+      </view>
+    </view>
+  </navigator>
+
+   <view class="divLine"></view>
+<navigator url="../../pages/yijianfankui/yijianfankui">
+  <view style="flex:4;height:50px">
+      <view class="iconfont">
+        <text class='iconfont icon-yijian' style='color:#1296db;font-size:50rpx;'></text>
+        <text> </text>
+        <text style="font-size:35rpx">意见反馈</text>
+      </view>
+    </view>
+  </navigator>
+   <view class="divLine"></view>
+   <navigator url="../../pages/tuijianhaoyou/tuijianhaoyou">
+    <view style="flex:5;height:50px">
+      <view class="iconfont">
+        <text class='iconfont icon-tuijianhaoyou' style='color:#1296db;font-size:50rpx;'></text>
+        <text> </text>
+        <text style="font-size:35rpx">推荐好友</text>
+      </view>
+    </view>
+  </navigator>
+   <view class="divLine"></view>
+   <navigator url="../../pages/guanyu/guanyu">
+    <view style="flex:6;height:50px">
+      <view class="iconfont">
+        <text class='iconfont icon-guanyu' style='color:#1296db;font-size:50rpx;'></text>
+        <text> </text>
+        <text style="font-size:35rpx">关于</text>
+      </view>
+    </view>
+  </navigator>
+   <view class="divLine"></view>
+   <navigator url="../../pages/shezhi/shezhi">
+    <view style="flex:7;height:50px">
+      <view class="iconfont">
+        <text class='iconfont icon-shezhi' style='color:#1296db;font-size:50rpx;'></text>
+        <text> </text>
+        <text style="font-size:35rpx">设置</text>
+      </view>
+    </view>
+  </navigator>
+   <view class="divLine"></view>
+   <navigator url="../../pages/changjianwenti/changjianwenti">
+    <view style="flex:8;height:50px">
+      <view class="iconfont">
+        <text class='iconfont icon-wenti' style='color:#1296db;font-size:50rpx;'></text>
+        <text> </text>
+        <text style="font-size:35rpx">常见问题</text>
+      </view>
+    </view>
+  </navigator>
+   <view class="divLine"></view>
+
+
+  </view>
+
+</template>
+
+<script>
+  import wepy from 'wepy'
+
+  const app = getApp()
+  export default class User extends wepy.page {
+    config = {
+      navigationBarTitleText: '个人中心'
+    }
+
+    data = {
+        userInfo: {
+        nickName: '加载中...'
+      },
+    };
+
+    methods = {
+      handleViewTap() {
+      wx.navigateTo({
+        url: '../../pages/gerenshezhi/gerenshezhi'
+      })
+    }
+  };
+
+  onLoad() {
+      let self = this
+      this.$parent.getUserInfo(function (userInfo) {
+        if (userInfo) {
+          self.userInfo = userInfo
+        }
+
+        wx.setStorageSync('nicheng',userInfo.nickName)
+        self.$apply()
+      })
+    }
+
+
+
+  }
+</script>

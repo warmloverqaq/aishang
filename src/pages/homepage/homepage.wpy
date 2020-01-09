@@ -1,0 +1,191 @@
+<style lang="less">
+@font-face {
+  font-family: 'iconfont';
+  /* project id 1574421 */
+  src: url('//at.alicdn.com/t/font_1574421_i9d5eikjpn.eot');
+  src: url('//at.alicdn.com/t/font_1574421_i9d5eikjpn.eot?#iefix') format('embedded-opentype'),
+    url('//at.alicdn.com/t/font_1574421_i9d5eikjpn.woff2') format('woff2'),
+    url('//at.alicdn.com/t/font_1574421_i9d5eikjpn.woff') format('woff'),
+    url('//at.alicdn.com/t/font_1574421_i9d5eikjpn.ttf') format('truetype'),
+    url('//at.alicdn.com/t/font_1574421_i9d5eikjpn.svg#iconfont') format('svg');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-laoshi:before {
+  content: "\e61f";
+}
+
+.icon-xingzhuang:before {
+  content: "\e64a";
+}
+
+.icon-bazi:before {
+  content: "\e6b5";
+}
+
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.content-question {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-left: 50rpx;
+  padding-right: 50rpx;
+  text-align: left;
+}
+
+.line {
+  margin: 0 auto;
+  height: 100rpx;
+  width: 2rpx;
+  background-color: #D8D8D8;
+}
+
+.divLine {
+  background: #E0E3DA;
+  width: 100%;
+  height: 5rpx;
+}
+
+.divLineCu {
+  background: #E0E3DA;
+  width: 100%;
+  height: 10rpx;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding-left: 50rpx;
+  padding-right: 50rpx;
+  text-align: center;
+}
+
+.contentLeft {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+  text-align: left;
+}
+
+.contentKecheng {
+  margin-left: 10rpx;
+  margin-right: 10rpx;
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 20rpx;
+  border-bottom: 1rpx solid #ccc;
+}
+
+
+.laoshiTupian {
+  width: 670rpx;
+  display: flex;
+  flex-direction: row;
+  margin-top: 20rpx;
+}
+
+</style>
+<template>
+  <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+    <block wx:for="{{imgUrls}}" wx:key="key">
+      <swiper-item>
+        <image src="{{item}}" class="slide-image" style='width:100%' height="100%" />
+      </swiper-item>
+    </block>
+  </swiper>
+
+  <view class="page">
+    <view class="page__bd">
+      <view class="weui-panel weui-panel_access">
+        <view class="weui-panel__hd">大家都在看</view>
+      </view>
+    </view>
+    <view class="page__bd">
+      <view class="weui-grids">
+        <block wx:for="{{griddata}}" wx:key="name">
+          <navigator url="{{item.url}}" class="weui-grid" hover-class="weui-grid_active">
+            <image class="weui-grid__icon" src="{{item.img}}"/>
+            <view class="weui-grid__label">{{item.name}}</view>
+          </navigator>
+        </block>
+      </view>
+    </view>
+  </view>
+</template>
+<script>
+import wepy from 'wepy'
+
+
+export default class Index extends wepy.page {
+  config = {
+    navigationBarTitleText: '首页'
+  }
+  components = {
+
+  }
+
+  data = {
+    imgUrls: [
+      '/pages/image/shouye1.jpg',
+      '/pages/image/shouye2.jpg',
+      '/pages/image/shouye3.jpg'
+    ],
+    indicatorDots: false,
+    autoplay: true,
+    interval: 3000,
+    duration: 1000,
+
+    grids: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15],
+    griddata:[{name:"grids_img1",img:"/pages/image/202001091105282.jpg",url:"../../pages/grids_img1/grids_img1"},
+    {name:"grids_img2",img:"/pages/image/202001091105287.jpg",url:"../../pages/grids_img2/grids_img2"},
+    {name:"grids_img3",img:"/pages/image/2020010911052810.jpg",url:"../../pages/grids_img3/grids_img3"},
+    {name:"grids_img4",img:"/pages/image/2020010911052815.jpg",url:"../../pages/grids_img4/grids_img4"},
+    {name:"grids_img5",img:"/pages/image/202001091105282.jpg",url:"../../pages/grids_img1/grids_img1"},
+    {name:"grids_img6",img:"/pages/image/202001091105287.jpg",url:"../../pages/grids_img2/grids_img2"},
+    {name:"grids_img7",img:"/pages/image/2020010911052810.jpg",url:"../../pages/grids_img3/grids_img3"},
+    {name:"grids_img8",img:"/pages/image/2020010911052815.jpg",url:"../../pages/grids_img4/grids_img4"},
+    {name:"grids_img9",img:"/pages/image/202001091105282.jpg",url:"../../pages/grids_img1/grids_img1"},
+    {name:"grids_img10",img:"/pages/image/202001091105287.jpg",url:"../../pages/grids_img2/grids_img2"},
+    {name:"grids_img11",img:"/pages/image/2020010911052810.jpg",url:"../../pages/grids_img3/grids_img3"},
+    {name:"grids_img12",img:"/pages/image/2020010911052815.jpg",url:"../../pages/grids_img4/grids_img4"},
+    {name:"grids_img13",img:"/pages/image/202001091105282.jpg",url:"../../pages/grids_img1/grids_img1"},
+    {name:"grids_img14",img:"/pages/image/202001091105287.jpg",url:"../../pages/grids_img2/grids_img2"},
+    {name:"grids_img15",img:"/pages/image/2020010911052810.jpg",url:"../../pages/grids_img3/grids_img3"},
+    {name:"grids_img16",img:"/pages/image/2020010911052815.jpg",url:"../../pages/grids_img4/grids_img4"},
+    ]
+  }
+
+
+  onLoad() {
+
+  }
+}
+
+</script>

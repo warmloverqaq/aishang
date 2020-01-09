@@ -1,0 +1,17 @@
+<style>
+</style>
+<template>
+  <view class="container">
+    <text>洗衣</text>
+  </view>
+</template>
+
+<script>
+  import wepy from 'wepy'
+
+  export default class User extends wepy.page {
+    config = {
+      navigationBarTitleText: '洗衣'
+    }
+  }
+</script>
